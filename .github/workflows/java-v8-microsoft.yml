@@ -54,16 +54,11 @@ name: IT
 ##       - '!distribution/proxy/src/main/release-docs/**'
 ##       - '!kernel/data-pipeline/**'
 ##       - '!*.md'
+
 on:
   workflow_call:
-    inputs:
-      image_name:
-#        required: true
-        type: string
     secrets:
-      registery_username:
-        required: true
-      registery_password:
+      it_password:
         required: true
 
 concurrency:

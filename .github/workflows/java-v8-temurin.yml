@@ -57,12 +57,12 @@ name: IT
 
 on:
   workflow_call:
-    inputs:
-      image_name:
-        #        required: true
-        type: string
-      tag:
-        type: string
+#    inputs:
+#      image_name:
+#        #        required: true
+#        type: string
+#      tag:
+#        type: string
     secrets:
       it_password:
         required: true
