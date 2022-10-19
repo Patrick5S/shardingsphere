@@ -57,156 +57,16 @@ on:
 
 
 jobs:
-  #v8
-  java-v8-temurin:
-    uses: Patrick1S/shardingsphere/.github/workflows/java-v8-temurin.yml@dev
+  #v8 && v11
+  java-v8-v11:
+    uses: Patrick1S/shardingsphere/.github/workflows/it-v8-v11.yml@dev
     secrets:
       it_password: ${{secrets.it_password}}
 
-
-  java-v8-zulu:
-    uses: Patrick1S/shardingsphere/.github/workflows/java-v8-zulu.yml@dev
+  #v17 && v19
+  java-v17-v19:
+    uses: Patrick1S/shardingsphere/.github/workflows/it-v17-v19.yml@dev
     secrets:
       it_password: ${{secrets.it_password}}
-
-  java-v8-adopt:
-    uses: Patrick1S/shardingsphere/.github/workflows/java-v8-adopt.yml@dev
-    secrets:
-      it_password: ${{secrets.it_password}}
-
-  java-v8-adopt-openj9:
-    uses: Patrick1S/shardingsphere/.github/workflows/java-v8-adopt-openj9.yml@dev
-    secrets:
-      it_password: ${{secrets.it_password}}
-
-  java-v8-liberica:
-    uses: Patrick1S/shardingsphere/.github/workflows/java-v8-liberica.yml@dev
-    secrets:
-      it_password: ${{secrets.it_password}}
-
-#  java-v8-microsoft:
-#    uses: Patrick1S/shardingsphere/.github/workflows/java-v8-microsoft.yml@dev
-#    secrets:
-#      it_password: ${{secrets.it_password}}
-
-  java-v8-corretto:
-    uses: Patrick1S/shardingsphere/.github/workflows/java-v8-corretto.yml@dev
-    secrets:
-      it_password: ${{secrets.it_password}}
-
-
-  #v11
-  java-v11-temurin:
-    uses: Patrick1S/shardingsphere/.github/workflows/java-v11-temurin.yml@dev
-    secrets:
-      it_password: ${{secrets.it_password}}
-
-
-  java-v11-zulu:
-    uses: Patrick1S/shardingsphere/.github/workflows/java-v11-zulu.yml@dev
-    secrets:
-      it_password: ${{secrets.it_password}}
-
-  java-v11-adopt:
-    uses: Patrick1S/shardingsphere/.github/workflows/java-v11-adopt.yml@dev
-    secrets:
-      it_password: ${{secrets.it_password}}
-
-  java-v11-adopt-openj9:
-    uses: Patrick1S/shardingsphere/.github/workflows/java-v11-adopt-openj9.yml@dev
-    secrets:
-      it_password: ${{secrets.it_password}}
-
-  java-v11-liberica:
-    uses: Patrick1S/shardingsphere/.github/workflows/java-v11-liberica.yml@dev
-    secrets:
-      it_password: ${{secrets.it_password}}
-
-  java-v11-microsoft:
-    uses: Patrick1S/shardingsphere/.github/workflows/java-v11-microsoft.yml@dev
-    secrets:
-      it_password: ${{secrets.it_password}}
-
-  java-v11-corretto:
-    uses: Patrick1S/shardingsphere/.github/workflows/java-v11-corretto.yml@dev
-    secrets:
-      it_password: ${{secrets.it_password}}
-
-  #v17
-  java-v17-temurin:
-    uses: Patrick1S/shardingsphere/.github/workflows/java-v17-temurin.yml@dev
-    secrets:
-      it_password: ${{secrets.it_password}}
-
-
-  java-v17-zulu:
-    uses: Patrick1S/shardingsphere/.github/workflows/java-v17-zulu.yml@dev
-    secrets:
-      it_password: ${{secrets.it_password}}
-
-  java-v17-adopt:
-    uses: Patrick1S/shardingsphere/.github/workflows/java-v17-adopt.yml@dev
-    secrets:
-      it_password: ${{secrets.it_password}}
-
-  java-v17-adopt-openj9:
-    uses: Patrick1S/shardingsphere/.github/workflows/java-v17-adopt-openj9.yml@dev
-    secrets:
-      it_password: ${{secrets.it_password}}
-
-  java-v17-liberica:
-    uses: Patrick1S/shardingsphere/.github/workflows/java-v17-liberica.yml@dev
-    secrets:
-      it_password: ${{secrets.it_password}}
-
-  java-v17-microsoft:
-    uses: Patrick1S/shardingsphere/.github/workflows/java-v17-microsoft.yml@dev
-    secrets:
-      it_password: ${{secrets.it_password}}
-
-  java-v17-corretto:
-    uses: Patrick1S/shardingsphere/.github/workflows/java-v17-corretto.yml@dev
-    secrets:
-      it_password: ${{secrets.it_password}}
-
-
-
-  #v19
-  java-v19-temurin:
-    uses: Patrick1S/shardingsphere/.github/workflows/java-v19-temurin.yml@dev
-    secrets:
-      it_password: ${{secrets.it_password}}
-
-
-  java-v19-zulu:
-    uses: Patrick1S/shardingsphere/.github/workflows/java-v19-zulu.yml@dev
-    secrets:
-      it_password: ${{secrets.it_password}}
-
-  java-v19-adopt:
-    uses: Patrick1S/shardingsphere/.github/workflows/java-v19-adopt.yml@dev
-    secrets:
-      it_password: ${{secrets.it_password}}
-
-#  java-v19-adopt-openj9:
-#    uses: Patrick1S/shardingsphere/.github/workflows/java-v19-adopt-openj9.yml@dev
-#    secrets:
-#      it_password: ${{secrets.it_password}}
-
-  java-v19-liberica:
-    uses: Patrick1S/shardingsphere/.github/workflows/java-v19-liberica.yml@dev
-    secrets:
-      it_password: ${{secrets.it_password}}
-
-#  java-v19-microsoft:
-#    uses: Patrick1S/shardingsphere/.github/workflows/java-v19-microsoft.yml@dev
-#    secrets:
-#      it_password: ${{secrets.it_password}}
-
-  java-v19-corretto:
-    uses: Patrick1S/shardingsphere/.github/workflows/java-v19-corretto.yml@dev
-    secrets:
-      it_password: ${{secrets.it_password}}
-
 
 
