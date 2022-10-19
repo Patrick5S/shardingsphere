@@ -62,7 +62,6 @@ jobs:
     uses: Patrick1S/shardingsphere/.github/workflows/java-v8-temurin.yml@dev
     secrets:
       it_password: ${{secrets.it_password}}
-    runs-on: ubuntu-latest
     continue-on-error: true
 
 
@@ -70,7 +69,6 @@ jobs:
     uses: Patrick1S/shardingsphere/.github/workflows/java-v8-zulu.yml@dev
     secrets:
       it_password: ${{secrets.it_password}}
-    runs-on: ubuntu-latest
     continue-on-error: true
 
   java-v8-adopt:
