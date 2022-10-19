@@ -69,7 +69,7 @@ concurrency:
 env:
   MAVEN_OPTS: -Dhttp.keepAlive=false -Dmaven.wagon.http.pool=false -Dmaven.wagon.http.retryHandler.class=standard -Dmaven.wagon.http.retryHandler.count=3 -Dmaven.javadoc.skip=true -Dcheckstyle.skip=true -Djacoco.skip=true -Dspotless.apply.skip=true
   java: 8
-  keyword: temurin
+  keyword: zulu
 jobs:
   build-it-image:
     name: Build IT image
