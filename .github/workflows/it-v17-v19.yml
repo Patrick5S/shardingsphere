@@ -116,10 +116,10 @@ jobs:
     secrets:
       it_password: ${{secrets.it_password}}
 
-  java-v17-adopt-openj9:
-    uses: Patrick1S/shardingsphere/.github/workflows/java-v17-adopt-openj9.yml@dev
-    secrets:
-      it_password: ${{secrets.it_password}}
+#  java-v17-adopt-openj9:
+#    uses: Patrick1S/shardingsphere/.github/workflows/java-v17-adopt-openj9.yml@dev
+#    secrets:
+#      it_password: ${{secrets.it_password}}
 
   java-v17-liberica:
     uses: Patrick1S/shardingsphere/.github/workflows/java-v17-liberica.yml@dev
