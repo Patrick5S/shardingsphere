@@ -20,7 +20,7 @@ name: IT
 on:
   workflow_call:
     secrets:
-      it_password:
+      it_test_password:
         required: true
 
 jobs:
