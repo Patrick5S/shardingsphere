@@ -140,31 +140,37 @@ jobs:
 
 
   java-v17-zulu:
+    needs: java-v17-temurin
     uses: Patrick1S/shardingsphere/.github/workflows/java-v17-zulu.yml@dev
     secrets:
       it_password: ${{secrets.it_password}}
 
   java-v17-adopt:
+    needs: java-v17-zulu
     uses: Patrick1S/shardingsphere/.github/workflows/java-v17-adopt.yml@dev
     secrets:
       it_password: ${{secrets.it_password}}
 
   java-v17-adopt-openj9:
+    needs: java-v17-adopt
     uses: Patrick1S/shardingsphere/.github/workflows/java-v17-adopt-openj9.yml@dev
     secrets:
       it_password: ${{secrets.it_password}}
 
   java-v17-liberica:
+    needs: java-v17-adopt-openj9
     uses: Patrick1S/shardingsphere/.github/workflows/java-v17-liberica.yml@dev
     secrets:
       it_password: ${{secrets.it_password}}
 
   java-v17-microsoft:
+    needs: java-v17-liberica
     uses: Patrick1S/shardingsphere/.github/workflows/java-v17-microsoft.yml@dev
     secrets:
       it_password: ${{secrets.it_password}}
 
   java-v17-corretto:
+    needs: java-v17-microsoft
     uses: Patrick1S/shardingsphere/.github/workflows/java-v17-corretto.yml@dev
     secrets:
       it_password: ${{secrets.it_password}}
@@ -173,17 +179,20 @@ jobs:
 
   #v19
   java-v19-temurin:
+    needs: java-v17-corretto
     uses: Patrick1S/shardingsphere/.github/workflows/java-v19-temurin.yml@dev
     secrets:
       it_password: ${{secrets.it_password}}
 
 
   java-v19-zulu:
+    needs: java-v19-temurin
     uses: Patrick1S/shardingsphere/.github/workflows/java-v19-zulu.yml@dev
     secrets:
       it_password: ${{secrets.it_password}}
 
   java-v19-adopt:
+    needs: java-v19-zulu
     uses: Patrick1S/shardingsphere/.github/workflows/java-v19-adopt.yml@dev
     secrets:
       it_password: ${{secrets.it_password}}
@@ -194,6 +203,7 @@ jobs:
 #      it_password: ${{secrets.it_password}}
 
   java-v19-liberica:
+    needs: java-v19-adopt
     uses: Patrick1S/shardingsphere/.github/workflows/java-v19-liberica.yml@dev
     secrets:
       it_password: ${{secrets.it_password}}
@@ -204,6 +214,7 @@ jobs:
 #      it_password: ${{secrets.it_password}}
 
   java-v19-corretto:
+    needs: java-v19-liberica
     uses: Patrick1S/shardingsphere/.github/workflows/java-v19-corretto.yml@dev
     secrets:
       it_password: ${{secrets.it_password}}
