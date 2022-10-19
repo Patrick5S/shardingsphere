@@ -65,16 +65,18 @@ jobs:
 
 
   java-v8-zulu:
+    needs: java-v8-temurin
     uses: Patrick1S/shardingsphere/.github/workflows/java-v8-zulu.yml@dev
     secrets:
       it_password: ${{secrets.it_password}}
-    need: java-v8-temurin
+
 
   java-v8-adopt:
+    needs: java-v8-zulu
     uses: Patrick1S/shardingsphere/.github/workflows/java-v8-adopt.yml@dev
     secrets:
       it_password: ${{secrets.it_password}}
-    need: java-v8-zulu
+
 
   java-v8-adopt-openj9:
     uses: Patrick1S/shardingsphere/.github/workflows/java-v8-adopt-openj9.yml@dev
