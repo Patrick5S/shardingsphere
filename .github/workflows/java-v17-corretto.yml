@@ -123,8 +123,8 @@ jobs:
     needs: build-it-image
     continue-on-error: true
     strategy:
-      max-parallel: 1
-      fail-fast: false
+#      max-parallel: 1
+#      fail-fast: false
       matrix:
         adapter: [ proxy, jdbc ]
         database: [ MySQL, PostgreSQL, openGauss ]
@@ -168,8 +168,8 @@ jobs:
     timeout-minutes: 10
     continue-on-error: true
     strategy:
-      max-parallel: 1
-      fail-fast: false
+#      max-parallel: 1
+#      fail-fast: false
       matrix:
         adapter: [ proxy, jdbc ]
         mode: [ Standalone, Cluster ]
@@ -216,8 +216,8 @@ jobs:
     timeout-minutes: 10
     continue-on-error: true
     strategy:
-      max-parallel: 1
-      fail-fast: false
+#      max-parallel: 1
+#      fail-fast: false
       matrix:
         adapter: [ proxy, jdbc ]
         mode: [ Standalone, Cluster ]
