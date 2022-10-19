@@ -83,10 +83,10 @@ jobs:
     secrets:
       it_password: ${{secrets.it_password}}
 
-  java-v8-microsoft:
-    uses: Patrick1S/shardingsphere/.github/workflows/java-v8-microsoft.yml@dev
-    secrets:
-      it_password: ${{secrets.it_password}}
+#  java-v8-microsoft:
+#    uses: Patrick1S/shardingsphere/.github/workflows/java-v8-microsoft.yml@dev
+#    secrets:
+#      it_password: ${{secrets.it_password}}
 
   java-v8-corretto:
     uses: Patrick1S/shardingsphere/.github/workflows/java-v8-corretto.yml@dev
