@@ -59,15 +59,24 @@ on:
 jobs:
   #v8
   java-v8-temurin:
-    uses: Patrick1S/shardingsphere/.github/workflows/java-v8-temurin.yml@dev
-    secrets:
-      it_password: ${{secrets.it_password}}
-
+    name: java-v8-temurin
+    runs-on: ubuntu-latest
+    continue-on-error: true
+#    timeout-minutes: 20
+    steps:
+      - uses: Patrick1S/shardingsphere/.github/workflows/java-v8-temurin.yml@dev
+        secrets:
+          it_password: ${{secrets.it_password}}
 
   java-v8-zulu:
-    uses: Patrick1S/shardingsphere/.github/workflows/java-v8-zulu.yml@dev
-    secrets:
-      it_password: ${{secrets.it_password}}
+    name: java-v8-zulu
+    runs-on: ubuntu-latest
+    continue-on-error: true
+#    timeout-minutes: 20
+    steps:
+      - uses: Patrick1S/shardingsphere/.github/workflows/java-v8-zulu.yml@dev
+        secrets:
+          it_password: ${{secrets.it_password}}
 
   java-v8-adopt:
     uses: Patrick1S/shardingsphere/.github/workflows/java-v8-adopt.yml@dev
