@@ -65,7 +65,7 @@ on:
       tag:
         type: string
     secrets:
-      it_test_password:
+      it_password:
         required: true
 
 concurrency:
