@@ -19,7 +19,7 @@ name: IT
 
 on:
   schedule:
-    - cron: '30 11 * * *'
+    - cron: '30 15 * * *'
   push:
     branches: [ master, dev ]
   #     paths:
