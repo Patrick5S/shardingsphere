@@ -18,6 +18,8 @@
 name: IT
 
 on:
+  schedule:
+    - cron: '0 8 * * *'
   push:
     branches: [ master, dev ]
   #     paths:
