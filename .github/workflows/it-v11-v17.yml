@@ -150,12 +150,14 @@ jobs:
 
   #v17
   java-v17-temurin:
+    needs: java-v11-corretto
     uses: Patrick1S/shardingsphere/.github/workflows/java-v17-temurin.yml@dev
     secrets:
       it_password: ${{secrets.it_password}}
 
 
   java-v17-zulu:
+    needs: java-v17-temurin
     uses: Patrick1S/shardingsphere/.github/workflows/java-v17-zulu.yml@dev
     secrets:
       it_password: ${{secrets.it_password}}
