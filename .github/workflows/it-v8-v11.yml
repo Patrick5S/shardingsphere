@@ -19,7 +19,7 @@ name: IT
 
 on:
   schedule:
-    - cron: '30 15 * * *'
+    - cron: '0 8 * * *'
   push:
     branches: [ master, dev ]
   #     paths:
@@ -59,7 +59,7 @@ on:
 
 
 jobs:
-#  #v8
+  #v8
 #  java-v8-temurin:
 #    uses: Patrick1S/shardingsphere/.github/workflows/java-v8-temurin.yml@dev
 #    secrets:
@@ -91,22 +91,21 @@ jobs:
 #    uses: Patrick1S/shardingsphere/.github/workflows/java-v8-liberica.yml@dev
 #    secrets:
 #      it_password: ${{secrets.it_password}}
-#
-##  java-v8-microsoft:
-##    uses: Patrick1S/shardingsphere/.github/workflows/java-v8-microsoft.yml@dev
-##    secrets:
-##      it_password: ${{secrets.it_password}}
-#
-#  java-v8-corretto:
-#    needs: java-v8-liberica
-#    uses: Patrick1S/shardingsphere/.github/workflows/java-v8-corretto.yml@dev
+
+#  java-v8-microsoft:
+#    uses: Patrick1S/shardingsphere/.github/workflows/java-v8-microsoft.yml@dev
 #    secrets:
 #      it_password: ${{secrets.it_password}}
-#
+
+  java-v8-corretto:
+#    needs: java-v8-liberica
+    uses: Patrick1S/shardingsphere/.github/workflows/java-v8-corretto.yml@dev
+    secrets:
+      it_password: ${{secrets.it_password}}
 
   #v11
   java-v11-temurin:
-#    needs: java-v8-corretto
+    needs: java-v8-corretto
     uses: Patrick1S/shardingsphere/.github/workflows/java-v11-temurin.yml@dev
     secrets:
       it_password: ${{secrets.it_password}}
@@ -130,23 +129,24 @@ jobs:
     secrets:
       it_password: ${{secrets.it_password}}
 
-  java-v11-liberica:
-    needs: java-v11-adopt-openj9
-    uses: Patrick1S/shardingsphere/.github/workflows/java-v11-liberica.yml@dev
-    secrets:
-      it_password: ${{secrets.it_password}}
+#  java-v11-liberica:
+#    needs: java-v11-adopt-openj9
+#    uses: Patrick1S/shardingsphere/.github/workflows/java-v11-liberica.yml@dev
+#    secrets:
+#      it_password: ${{secrets.it_password}}
+#
+#  java-v11-microsoft:
+#    needs: java-v11-liberica
+#    uses: Patrick1S/shardingsphere/.github/workflows/java-v11-microsoft.yml@dev
+#    secrets:
+#      it_password: ${{secrets.it_password}}
+#
+#  java-v11-corretto:
+#    needs: java-v11-microsoft
+#    uses: Patrick1S/shardingsphere/.github/workflows/java-v11-corretto.yml@dev
+#    secrets:
+#      it_password: ${{secrets.it_password}}
 
-  java-v11-microsoft:
-    needs: java-v11-liberica
-    uses: Patrick1S/shardingsphere/.github/workflows/java-v11-microsoft.yml@dev
-    secrets:
-      it_password: ${{secrets.it_password}}
-
-  java-v11-corretto:
-    needs: java-v11-microsoft
-    uses: Patrick1S/shardingsphere/.github/workflows/java-v11-corretto.yml@dev
-    secrets:
-      it_password: ${{secrets.it_password}}
 
 #  #v17
 #  java-v17-temurin:

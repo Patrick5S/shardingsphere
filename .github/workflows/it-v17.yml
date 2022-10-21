@@ -19,7 +19,7 @@ name: IT
 
 on:
   schedule:
-    - cron: '0 19 * * *'
+    - cron: '0 14 * * *'
   push:
     branches: [ master, dev ]
   #     paths:
@@ -134,21 +134,21 @@ jobs:
 #    secrets:
 #      it_password: ${{secrets.it_password}}
 
-  #v17
-  java-v17-temurin:
-    uses: Patrick1S/shardingsphere/.github/workflows/java-v17-temurin.yml@dev
-    secrets:
-      it_password: ${{secrets.it_password}}
-
-
-  java-v17-zulu:
-    needs: java-v17-temurin
-    uses: Patrick1S/shardingsphere/.github/workflows/java-v17-zulu.yml@dev
-    secrets:
-      it_password: ${{secrets.it_password}}
+#  #v17
+#  java-v17-temurin:
+#    uses: Patrick1S/shardingsphere/.github/workflows/java-v17-temurin.yml@dev
+#    secrets:
+#      it_password: ${{secrets.it_password}}
+#
+#
+#  java-v17-zulu:
+#    needs: java-v17-temurin
+#    uses: Patrick1S/shardingsphere/.github/workflows/java-v17-zulu.yml@dev
+#    secrets:
+#      it_password: ${{secrets.it_password}}
 
   java-v17-adopt:
-    needs: java-v17-zulu
+#    needs: java-v17-zulu
     uses: Patrick1S/shardingsphere/.github/workflows/java-v17-adopt.yml@dev
     secrets:
       it_password: ${{secrets.it_password}}
