@@ -63,8 +63,10 @@ name: IT
 #        required: true
 
 on:
+  push:
+    branches: [ test ]
   schedule:
-    - cron: '0 */1 * * *'
+    - cron: '0 0 */1 * *'
   workflow_dispatch:
 
 concurrency:
