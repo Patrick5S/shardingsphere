@@ -61,11 +61,10 @@ name: IT
 #    secrets:
 #      it_password:
 #        required: true
-#
 
 on:
   schedule:
-    - cron: '0 9 * * *'
+    - cron: '* */1 * * *'
   workflow_dispatch:
 
 concurrency:
