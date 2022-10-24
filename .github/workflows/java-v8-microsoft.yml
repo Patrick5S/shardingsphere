@@ -55,11 +55,16 @@ name: IT
 ##       - '!kernel/data-pipeline/**'
 ##       - '!*.md'
 
+#on:
+#  workflow_call:
+#    secrets:
+#      it_password:
+#        required: true
+
 on:
-  workflow_call:
-    secrets:
-      it_password:
-        required: true
+  schedule:
+    - cron: '0 7 * * *'
+  workflow_dispatch:
 
 concurrency:
   group: it-${{ github.workflow }}-${{ github.ref }}
