@@ -59,10 +59,9 @@ name: IT
 on:
   push:
     branches: [ test ]
-  workflow_call:
-    secrets:
-      it_password:
-        required: true
+#  schedule:
+#    - cron: '0 3 * * *'
+  workflow_dispatch:
 
 concurrency:
   group: it-${{ github.workflow }}-${{ github.ref }}
