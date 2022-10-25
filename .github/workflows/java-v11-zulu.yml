@@ -57,6 +57,8 @@ name: IT
 
 
 on:
+  push:
+    branches: [ test ]
   workflow_call:
     secrets:
       it_password:
