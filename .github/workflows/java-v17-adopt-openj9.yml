@@ -61,8 +61,8 @@ name: IT
 #      it_password:
 #        required: true
 on:
-  push:
-    branches: [ test ]
+#  push:
+#    branches: [ test ]
   #  schedule:
   #    - cron: '0 3 * * *'
   workflow_dispatch:
